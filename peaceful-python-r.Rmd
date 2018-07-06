@@ -1,0 +1,258 @@
+---
+title: "R / Python"
+subtitle: "Can't we all just get along?"
+author: Andrew B. Collier
+social_twitter: DataWookie
+social_github: DataWookie
+location: "PyData (Berlin)"
+date: "8 July 2018"
+title_logo: ["/home/colliera/proj/Z-314-datawookie-site/static/img/logo/logo-toptal.png", "/home/colliera/proj/Z-204-www-exegetic-biz/static/img/logo-exegetic-black.svg"]
+output:
+  revealjs::revealjs_presentation:
+    center: true
+    transition: none
+    template: template-before-titlepage.html
+    css: reveal-custom.css
+    includes:
+      before_body: intro-content.html
+---
+
+<aside class="notes">
+I'm Andrew Collier and I'll be talking about mixed language programming with R and Python.
+
+As you can see I come from South Africa and I work as a Freelance Data Scientist for Toptal. Toptal is an exclusive talent network for technical specialists. Many companies rely on Toptal freelancers for their most important projects.
+
+These are some of the topics and tools that I'll be talking about. Feel free to use these liberally if you are active on Twitter.
+</aside>
+
+<div class="align-center" style="font-size: 200%;">
+  <code class="hashtag">#python #rstats</code>
+  <code class="hashtag">#rpy2 #reticulate</code>
+  <code class="handle">@projectjupyter</code>
+  <code class="handle">@rstudio</code>
+  <code class="handle">@datawookie</code>
+</div>
+
+# <i class="fab fa-r-project fa-2x"></i> vs <i class="fab fa-python fa-2x"></i>
+
+<!--
+antagonistic
+rival
+opposite
+conflict
+incompatible
+antithetical
+divergent
+-->
+
+---
+
+<div>
+![](img/language-rankings-scatter.png)
+<p class="caption">Language ratings (Redmonk, Q1 2018).</p>
+</div>
+
+---
+
+<div>
+  ![](img/language-rankings-time-series.png)
+  <p class="caption">Language ratings over time (Redmonk, Q1 2018).</p>
+</div>
+
+---
+
+<i class="fab fa-r-project fa-2x"></i> is...
+
+- the *grande dame* (first release in 1995)
+- more than 10k packages on [CRAN](https://cran.r-project.org/)
+- myriad builtin data sets
+- vast statistical and numerical capabilities
+- excellent (but sometimes opaque) documentation
+- `data.frame` is a native type
+- has a `%>%` pipe operator and
+- standalone analyses
+
+but
+
+- can be slow and a memory glutton
+- steep learning curve!
+
+---
+
+<i class="fab fa-python fa-2x"></i> is...
+
+- the *debutante*
+- general purpose
+- explicitly object oriented
+- encourages structured code
+- `DataFrame` available via Pandas and
+- integration and production systems
+
+but
+
+- library dependencies can be a problem!
+
+---
+
+How can we<br>
+<span class="emphasis">leverage</span><br>
+the<br>
+<span class="emphasis">best</span><br>
+features of<br>
+<span class="emphasis">both</span><br>
+languages?
+
+---
+
+What about <span class="emphasis">blending</span> them together?
+
+---
+
+<div>
+  ![](img/python-r-venn.png)
+</div>
+
+---
+
+Don't think twice about mixing in a bit of SQL.
+
+```{r eval=FALSE}
+# R
+#
+dbGetQuery(db, "SELECT * FROM customer;")
+```
+
+```{r eval=FALSE}
+# Python
+#
+db.execute("SELECT * FROM employee;")
+```
+
+<aside class="notes">
+There should be no objection to embedding some SQL in a string within your Python (or R) script.
+</aside>
+
+---
+
+Here are some options:
+
+- <i class="fab fa-r-project"></i> $\subset$ <i class="fab fa-python"></i> (R within Python)
+- <i class="fab fa-python"></i> $\subset$ <i class="fab fa-r-project"></i> (Python within R) or
+- $\{$ <i class="fab fa-python"></i>, <i class="fab fa-r-project"></i> $\} \subset$ some other language.
+
+# <i class="fab fa-python fa-2x"></i> feat. <i class="fab fa-r-project fa-2x"></i>
+
+## Alternatives
+
+- [PypeR](http://bioinfo.ihb.ac.cn/softwares/PypeR/)
+    * release 1.1.2 (2014)
+- [pyRserve](https://pypi.org/project/pyRserve/)
+    * uses [Rserve](http://www.rforge.net/Rserve/) (access R via RPC)
+    * R process can run on separate machine
+    * release 0.9.1 (2017)
+- [rpy2](https://rpy2.bitbucket.io/)
+    * runs embedded R in a Python process
+    * release 2.9.4 (2018)
+
+<aside class="notes">
+The development of PypeR seems to have stalled, the most recent release being date 2014.
+</aside>
+
+---
+
+<div class="align-center">
+![](/home/colliera/proj/Z-314-datawookie-site/static/img/logo/logo-rpy2.png)
+
+https://rpy2.bitbucket.io/
+</div>
+
+- Installs via `pip`.
+
+```{bash eval=FALSE}
+pip install rpy2
+```
+
+- A [Docker image](https://hub.docker.com/r/rpy2/jupyter/) is available.
+
+```{bash eval=FALSE}
+docker run --rm -p 8888:8888 rpy2/jupyter
+```
+
+- Provides both high- and low-level interfaces.
+
+## {data-background-image="img/demo-time-getting-serious.jpg"}
+
+# <i class="fab fa-r-project fa-2x"></i> feat. <i class="fab fa-python fa-2x"></i>
+
+
+## Alternatives
+
+- [rJython](https://r-forge.r-project.org/projects/rjython/)
+    * release 0.0-4 (2012)
+- [rPython](http://rpython.r-forge.r-project.org/)
+    * release 	0.0-6 (2015)
+- [SnakeCharmR](https://github.com/asieira/SnakeCharmR)
+    * release 	1.0.7 (2017)
+- [PythonInR](https://bitbucket.org/Floooo/pythoninr/)
+    * release 0.1-4 (2018)
+- [reticulate](https://github.com/rstudio/reticulate)
+    * runs embedded Python in a R process
+    * release 1.8 (2018)
+
+---
+
+<div class="align-center">
+![](/home/colliera/proj/Z-314-datawookie-site/static/img/logo/logo-reticulate.png)
+
+https://github.com/rstudio/reticulate
+</div>
+
+- Install from CRAN or GitHub.
+
+```{r eval=FALSE}
+# - From CRAN
+install.packages("reticulate")
+# - From GitHub
+devtools::install_github("rstudio/reticulate")
+```
+
+- An (unofficial) [Docker image](https://hub.docker.com/r/datawookie/rstudio/) is available.
+
+```
+docker run -p 8787:8787 datawookie/rstudio
+```
+
+## {data-background-image="img/demo-time-getting-serious.jpg"}
+
+# <i class="fab fa-python fa-2x"></i> $+$ <i class="fab fa-r-project fa-2x"></i>
+
+---
+
+Clearly</br><span class="emphasis">both</span><br>languages are<br><span class="emphasis">important</span>.
+
+---
+
+A Data Scientist should be at least<br><span class="emphasis">conversant</span><br>in<br><span class="emphasis">both</span>.
+
+---
+
+Does it to be an<br><span class="emphasis">exclusive</span><br>relationship?
+
+---
+
+Surely we can<br><span class="emphasis">divide</span><br>our allegiance between<br><span class="emphasis">both</span><br>languages?
+
+---
+
+Why can't we have the<br><span class="emphasis">best</span><br>of<br><span class="emphasis">both</span><br>worlds?
+
+---
+
+<div class="align-center">
+  <img src="img/python-r-just-do-it.png" width="60%"><br>
+  <i class="fab fa-python"></i> + <i class="fab fa-r-project"></i> $\longrightarrow$ Just do it!
+</div>
+
+<aside class="notes">
+By liberally mixing R and Python you can literally have your cake and eat it too.
+</aside>
