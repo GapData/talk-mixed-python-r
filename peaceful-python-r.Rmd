@@ -28,8 +28,8 @@ These are some of the topics and tools that I'll be talking about. Feel free to 
 <div class="align-center" style="font-size: 200%;">
   <code class="hashtag">#python #rstats</code>
   <code class="hashtag">#rpy2 #reticulate</code>
-  <code class="handle">@projectjupyter</code><br>
-  <code class="handle">@rstudio</code>
+  <code class="handle">@projectjupyter</code>
+  <code class="handle">@rstudio</code><br>
   <code class="handle">@datawookie</code>
 </div>
 
