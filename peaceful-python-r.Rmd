@@ -28,7 +28,7 @@ These are some of the topics and tools that I'll be talking about. Feel free to 
 <div class="align-center" style="font-size: 200%;">
   <code class="hashtag">#python #rstats</code>
   <code class="hashtag">#rpy2 #reticulate</code>
-  <code class="handle">@projectjupyter</code>
+  <code class="handle">@projectjupyter</code><br>
   <code class="handle">@rstudio</code>
   <code class="handle">@datawookie</code>
 </div>
@@ -49,7 +49,7 @@ divergent
 
 <div>
 ![](img/language-rankings-scatter.png)
-<p class="caption">Language ratings (Redmonk, Q1 2018).</p>
+<p class="caption">Language rankings (Redmonk, Q1 2018).</p>
 </div>
 
 ---
@@ -67,9 +67,7 @@ divergent
 - more than 10k packages on [CRAN](https://cran.r-project.org/)
 - myriad builtin data sets
 - vast statistical and numerical capabilities
-- excellent (but sometimes opaque) documentation
-- `data.frame` is a native type
-- has a `%>%` pipe operator and
+- excellent (but sometimes opaque) documentation and
 - standalone analyses
 
 but
@@ -81,15 +79,15 @@ but
 
 <i class="fab fa-python fa-2x"></i> is...
 
-- the *debutante*
-- general purpose
+- the Data Science *debutante* (although first release in 1991)
 - explicitly object oriented
 - encourages structured code
-- `DataFrame` available via Pandas and
+- general purpose and
 - integration and production systems
 
 but
 
+- no *native* Data Science capabilities
 - library dependencies can be a problem!
 
 ---
@@ -105,12 +103,6 @@ languages?
 ---
 
 What about <span class="emphasis">blending</span> them together?
-
----
-
-<div>
-  ![](img/python-r-venn.png)
-</div>
 
 ---
 
@@ -131,6 +123,12 @@ db.execute("SELECT * FROM employee;")
 <aside class="notes">
 There should be no objection to embedding some SQL in a string within your Python (or R) script.
 </aside>
+
+---
+
+<div>
+  ![](img/python-r-venn.png)
+</div>
 
 ---
 
@@ -216,12 +214,6 @@ install.packages("reticulate")
 devtools::install_github("rstudio/reticulate")
 ```
 
-- An (unofficial) [Docker image](https://hub.docker.com/r/datawookie/rstudio/) is available.
-
-```
-docker run -p 8787:8787 datawookie/rstudio
-```
-
 ## {data-background-image="img/demo-time-getting-serious.jpg"}
 
 # <i class="fab fa-python fa-2x"></i> $+$ <i class="fab fa-r-project fa-2x"></i>
@@ -232,11 +224,11 @@ Clearly</br><span class="emphasis">both</span><br>languages are<br><span class="
 
 ---
 
-A Data Scientist should be at least<br><span class="emphasis">conversant</span><br>in<br><span class="emphasis">both</span>.
+A Data Scientist should be at least<br><span class="emphasis">conversant</span><br>in<br><span class="emphasis">both</span><br>of them.
 
 ---
 
-Does it to be an<br><span class="emphasis">exclusive</span><br>relationship?
+Does it need to be an <span class="emphasis">exclusive</span> relationship?
 
 ---
 
@@ -244,15 +236,15 @@ Surely we can<br><span class="emphasis">divide</span><br>our allegiance between<
 
 ---
 
-Why can't we have the<br><span class="emphasis">best</span><br>of<br><span class="emphasis">both</span><br>worlds?
+Then we can have the<br><span class="emphasis">best</span><br>of<br><span class="emphasis">both</span><br>worlds.
 
 ---
 
 <div class="align-center">
   <img src="img/python-r-just-do-it.png" width="60%"><br>
-  <i class="fab fa-python"></i> + <i class="fab fa-r-project"></i> $\longrightarrow$ Just do it!
+  <!-- <i class="fab fa-python"></i> + <i class="fab fa-r-project"></i> $\longrightarrow$ Just do it! -->
 </div>
 
 <aside class="notes">
-By liberally mixing R and Python you can literally have your cake and eat it too.
+So, I encourage you to just do it. Liberally mix R and Python. You can have your cake and eat it too.
 </aside>
