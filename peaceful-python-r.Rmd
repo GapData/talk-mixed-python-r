@@ -9,6 +9,8 @@ date: "8 July 2018"
 title_logo: ["/home/colliera/proj/Z-314-datawookie-site/static/img/logo/logo-toptal.png", "/home/colliera/proj/Z-204-www-exegetic-biz/static/img/logo-exegetic-black.svg"]
 output:
   revealjs::revealjs_presentation:
+    self_contained: false
+    reveal_plugins: ["notes"]
     center: true
     transition: none
     template: template-before-titlepage.html
@@ -88,7 +90,7 @@ but
 but
 
 - no *native* Data Science capabilities
-- library dependencies can be a problem!
+- module dependencies can be a problem!
 
 ---
 
@@ -256,18 +258,24 @@ We can<br><span class="emphasis">divide</span><br>our allegiance between<br><spa
 
 ---
 
-<div class="align-center">
-  <img src="img/python-r-just-do-it.png" width="60%"><br>
-  <!-- <i class="fab fa-python"></i> + <i class="fab fa-r-project"></i> $\longrightarrow$ Just do it! -->
+<div class="container">
+<div class="col">
+You will have the<br><span class="emphasis">best</span><br>of<br><span class="emphasis">both</span><br>worlds.
+</div>
+<div class="col">
+<p style="text-align: right;">
+<img src="img/python-r-just-do-it.png" width="60%"><br>
+</p>
+</div>
 </div>
 
-<aside class="notes">
-So, I encourage you to just do it. Liberally mix R and Python. You can have your cake and eat it too.
-</aside>
-
----
-
-You can have the<br><span class="emphasis">best</span><br>of<br><span class="emphasis">both</span><br>worlds.
-
+<div class="container" style="margin-top: 100px;">
+<div class="col">
+<p style="margin: 0;"><img style="margin: 0; height: 60px;" src="/home/colliera/proj/Z-314-datawookie-site/static/img/logo/logo-toptal.png"></p>
+<p style="margin: 0;"><a style="margin: 0;" href="https://bit.ly/2udd9uQ">https://bit.ly/2udd9uQ</a></p>
+</div>
+<div class="col">
 <p style="text-align: right; margin: 0;"><i class="fab fa-python"></i> $+$ <i class="fab fa-r-project"></i> FTW</p>
 <p style="text-align: right; margin: 0;"><a href="https://twitter.com/datawookie">@datawookie</a></p>
+</div>
+</div>
