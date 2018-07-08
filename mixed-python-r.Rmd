@@ -9,8 +9,6 @@ date: "8 July 2018"
 title_logo: ["/home/colliera/proj/Z-314-datawookie-site/static/img/logo/logo-toptal.png", "/home/colliera/proj/Z-204-www-exegetic-biz/static/img/logo-exegetic-black.svg"]
 output:
   revealjs::revealjs_presentation:
-    self_contained: false
-    reveal_plugins: ["notes"]
     center: true
     transition: none
     template: template-before-titlepage.html
