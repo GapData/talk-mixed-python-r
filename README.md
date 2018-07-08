@@ -1,3 +1,5 @@
+The code for the demos is in `demo-r-from-python.ipynb` and `demo-python-from-r.R`.
+
 ## Speaker Notes
 
 ```
