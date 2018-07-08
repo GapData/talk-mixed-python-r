@@ -125,3 +125,12 @@ ul > li > code {
   color: #c7254e;
   background-color: white;
 }
+
+/* COLUMNS ----------------------------------------------------------------- */
+
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}

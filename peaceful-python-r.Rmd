@@ -2,8 +2,8 @@
 title: "R / Python"
 subtitle: "Can't we all just get along?"
 author: Andrew B. Collier
-social_twitter: DataWookie
-social_github: DataWookie
+social_twitter: datawookie
+social_github: datawookie
 location: "PyData (Berlin)"
 date: "8 July 2018"
 title_logo: ["/home/colliera/proj/Z-314-datawookie-site/static/img/logo/logo-toptal.png", "/home/colliera/proj/Z-204-www-exegetic-biz/static/img/logo-exegetic-black.svg"]
@@ -20,7 +20,7 @@ output:
 <aside class="notes">
 I'm Andrew Collier and I'll be talking about mixed language programming with R and Python.
 
-As you can see I come from South Africa and I work as a Freelance Data Scientist for Toptal. Toptal is an exclusive talent network for technical specialists. Many companies rely on Toptal freelancers for their most important projects.
+As you can see I come from South Africa and I work as a Freelance Data Scientist for Toptal. Toptal is an exclusive talent network for technical specialists. Leading companies rely on Toptal freelancers for their most important projects.
 
 These are some of the topics and tools that I'll be talking about. Feel free to use these liberally if you are active on Twitter.
 </aside>
@@ -176,8 +176,6 @@ pip install rpy2
 docker run --rm -p 8888:8888 rpy2/jupyter
 ```
 
-- Provides both high- and low-level interfaces.
-
 ## {data-background-image="img/demo-time-getting-serious.jpg"}
 
 # <i class="fab fa-r-project fa-2x"></i> feat. <i class="fab fa-python fa-2x"></i>
@@ -220,6 +218,28 @@ devtools::install_github("rstudio/reticulate")
 
 ---
 
+<div class="container">
+<div class="col">
+### rpy2
+
+- run R code
+- Jupyter magic: `%R` and `%%R`
+- `-i` and `-o` for block magic
+- `pandas2ri` conversions
+</div>
+<div class="col">
+### reticulate
+
+- run Python code
+- virtual environments
+- `import()` modules
+- `repl_python()`
+- `py$` and `r.` special objects
+</div>
+</div>
+
+---
+
 Clearly</br><span class="emphasis">both</span><br>languages are<br><span class="emphasis">important</span>.
 
 ---
@@ -232,11 +252,7 @@ Does it need to be an <span class="emphasis">exclusive</span> relationship?
 
 ---
 
-Surely we can<br><span class="emphasis">divide</span><br>our allegiance between<br><span class="emphasis">both</span><br>languages?
-
----
-
-Then we can have the<br><span class="emphasis">best</span><br>of<br><span class="emphasis">both</span><br>worlds.
+We can<br><span class="emphasis">divide</span><br>our allegiance between<br><span class="emphasis">both</span><br>languages!
 
 ---
 
@@ -248,3 +264,10 @@ Then we can have the<br><span class="emphasis">best</span><br>of<br><span class=
 <aside class="notes">
 So, I encourage you to just do it. Liberally mix R and Python. You can have your cake and eat it too.
 </aside>
+
+---
+
+You can have the<br><span class="emphasis">best</span><br>of<br><span class="emphasis">both</span><br>worlds.
+
+<p style="text-align: right; margin: 0;"><i class="fab fa-python"></i> $+$ <i class="fab fa-r-project"></i> FTW</p>
+<p style="text-align: right; margin: 0;"><a href="https://twitter.com/datawookie">@datawookie</a></p>
